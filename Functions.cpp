@@ -9,11 +9,6 @@
 
 using namespace std;
 
-struct oldNewer{
-    int old;
-    int newer;
-};
-
 //A function to check if a value is in a vector.
 //Returns the index of the value if it is in the vector, otherwise returns -1.
 int checkArray(vector<int>& vectorToCheck) {
@@ -30,7 +25,7 @@ int checkArray(vector<int>& vectorToCheck) {
 
 //A function to modify a value in a vector.
 oldNewer modifyArray(vector<int>& vectorToModify) {
-    oldNewer tempStruct;
+    oldNewer tempStruct{};
     int tempIndex;
     cout << "Please enter index of value to modify: ";
     cin >> tempIndex;

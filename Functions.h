@@ -11,7 +11,10 @@
 
 using namespace std;
 
-struct oldNewer;
+struct oldNewer {
+    int old;
+    int newer;
+};
 
 //A function to check if a value is in a vector.
 //Returns the index of the value if it is in the vector, otherwise returns -1.
