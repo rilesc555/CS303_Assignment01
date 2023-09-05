@@ -13,13 +13,16 @@ using namespace std;
 
 struct oldNewer;
 
-int checkArray(vector<int>& vectorToCheck, int toCheck);
+//A function to check if a value is in a vector.
+//Returns the index of the value if it is in the vector, otherwise returns -1.
+int checkArray(vector<int>& vectorToCheck);
 
-oldNewer modifyArray(vector<int>& vectorToModify, int toModify, int newValue);
+//A function to modify a value in a vector
+oldNewer modifyArray(vector<int>& vectorToModify);
 
-void addIntToArray(vector<int>& vectorToAddTo, int toAdd);
+void addIntToArray(vector<int>& vectorToAddTo);
 
-void removeInt(vector<int>& vectorToRemoveFrom, int toRemove);
+void removeInt(vector<int>& vectorToRemoveFrom);
 
 
 

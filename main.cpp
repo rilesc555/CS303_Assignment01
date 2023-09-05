@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <cstdio>
+#include "Functions.h"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ int main() {
         input >> tempInt;
         intVector.push_back(tempInt);
     }
+
     input.close();
 
     return 0;

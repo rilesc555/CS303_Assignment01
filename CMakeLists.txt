@@ -3,4 +3,4 @@ project(CS303_Assignment01)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CS303_Assignment01 main.cpp Functions.cpp Functions.h Functions.cpp Functions.h)
+add_executable(CS303_Assignment01 main.cpp Functions.cpp Functions.h)
