@@ -4,7 +4,7 @@ Instructions:
 3. follow the instructions in the console
 4. enjoy!
 
-Screenshots of output are found in cmake-build-debug
+Screenshots of output are found in main folder
 
 
 
