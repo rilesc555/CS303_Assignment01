@@ -16,17 +16,20 @@ struct oldNewer {
     int newer;
 };
 
-//A function to check if a value is in a vector.
-//Returns the index of the value if it is in the vector, otherwise returns -1.
-int checkArray(vector<int>& vectorToCheck);
+//A function to check if a certain integer exists in the array if the number is present return the index where the number is FIRST present.
+//If the number is not present return -1.
 
-//A function to modify a value in a vector
-oldNewer modifyArray(vector<int>& vectorToModify);
+int checkArray(const int intVector[],size_t size, int value);
 
-void addIntToArray(vector<int>& vectorToAddTo);
+// A function that can modify the value of an integer when called with the index of the integer in the
+// array and return the new value and old value back to the user.
+oldNewer modifyArray(int intVector[], size_t size, int index, int value);
 
-void removeInt(vector<int>& vectorToRemoveFrom);
+//A function that adds a new integer to the end of the array
+void addIntToArray(int intVector[], size_t size, int value);
 
+//A function which intakes an index of an array and replaces the value with either 0 or removes the integer altogether.
+void removeInt(int intVector[], size_t size, int index);
 
 
 #endif //CS303_ASSIGNMENT01_FUNCTIONS_H

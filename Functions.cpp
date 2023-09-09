@@ -9,47 +9,40 @@
 
 using namespace std;
 
-//A function to check if a value is in a vector.
-//Returns the index of the value if it is in the vector, otherwise returns -1.
-int checkArray(vector<int>& vectorToCheck) {
-    int tempInt;
-    cout << "Please enter a value to check for: ";
-    cin >> tempInt;
-    for (int i = 0; i < vectorToCheck.size(); i++) {
-        if (vectorToCheck[i] == tempInt) {
+//A function to check if a certain integer exists in the array if the number is present return the index where the number is FIRST present.
+//If the number is not present return -1.
+int checkArray(const int intVector[],size_t size, int value) {
+    for (int i = 0; i < size; i++) {
+        if (intVector[i] == value) {
             return i;
         }
     }
     return -1;
 }
 
-//A function to modify a value in a vector.
-oldNewer modifyArray(vector<int>& vectorToModify) {
-    oldNewer tempStruct{};
-    int tempIndex;
-    cout << "Please enter index of value to modify: ";
-    cin >> tempIndex;
-    int tempInt;
-    cout << "Please enter new value: ";
-    cin >> tempInt;
-    tempStruct.old = vectorToModify[tempIndex];
-    vectorToModify[tempIndex] = tempInt;
-    tempStruct.newer = vectorToModify[tempIndex];
-    return tempStruct;
+// A function that can modify the value of an integer when called with the index of the integer in the
+// array and return the new value and old value back to the user.
+oldNewer modifyArray(int intVector[], size_t size, int index, int value) {
+    oldNewer temp{};
+    temp.old = intVector[index];
+    intVector[index] = value;
+    temp.newer = intVector[index];
+    return temp;
 }
 
-void addIntToArray(vector<int>& vectorToAddTo) {
-    int tempInt;
-    cout << "Please enter a value to add to the array: ";
-    cin >> tempInt;
-    vectorToAddTo.push_back(tempInt);
+//A function that adds a new integer to the end of the array
+void addIntToArray(int intVector[], size_t size, int value) {
+    intVector[size] = value;
 }
 
-void removeInt(vector<int>& vectorToRemoveFrom) {
-    int tempIndex;
-    cout << "Please enter index of value to remove from the array: ";
-    cin >> tempIndex;
-    vectorToRemoveFrom.erase(vectorToRemoveFrom.begin() + tempIndex);
+//A function which intakes an index of an array and replaces the value with either 0 or removes the integer altogether.
+void removeInt(int intVector[], size_t size, int index) {
+    intVector[index] = 0;
 }
+
+
+
+
+
 
 
