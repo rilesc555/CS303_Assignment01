@@ -75,7 +75,7 @@ int main() {
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     throw runtime_error("Invalid input.");
                 }
-                if (tempInt >= size) {
+                if (tempInt >= size || tempInt < 0) {
                     throw runtime_error("Index out of bounds.");
                 }
                 cout << "Enter a value to modify the index with: ";
